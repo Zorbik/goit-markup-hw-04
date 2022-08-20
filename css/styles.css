@@ -15,7 +15,8 @@ h2,
 h3,
 p,
 ul,
-li {
+li,
+a {
     margin: 0;
     border-width:  0;
     padding: 0;
@@ -39,7 +40,7 @@ body {
 
 }
 header {
-outline: 1px solid #ECECEC;
+border-bottom: 1px solid #ECECEC;
 }
 .site-nav,
 header .contacts {
@@ -53,6 +54,7 @@ header .contacts {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+
 .logo {
     margin-right: 93px;
     
@@ -76,20 +78,41 @@ header .logo{
 .contact-box {
     display: flex;
     margin-left: auto;
-
+}
+.contact-box-email .nav-icon {
+    padding: 0;
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+    fill: var(--secondary-color);
+}
+.contact-box-phone .nav-icon {
+    padding: 0;
+    margin-right: 10px;
+    width: 10px;
+    height: 16px;
+    fill: var(--secondary-color);
 }
 
 .main-nav {
     display: flex;
     align-items: center;
 }
-footer,
 .hero {
-    background-color: var(--footer-background-color);  
+    display: flex;
+    height: 600px;
+    align-items: center;
+    background-image:
+        linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/main-background-img.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 .hero button,
 .filter:hover,
-.filter:focus {
+.filter:focus,
+.link:hover {
     color: var(--primary-background-color);
     background-color: var(--logo-color);
 }
@@ -112,6 +135,7 @@ footer,
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     min-width: 216px;
     padding: 10px 32px;
+    border: none;
 
     font-weight: 700;
     font-size: 16px;
@@ -119,7 +143,8 @@ footer,
     letter-spacing: 0.06em;
 }
 .container .section,
-.works {
+.works,
+.clients .container {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -150,7 +175,29 @@ footer,
 .advant-box .item+.item {
     margin-left: 30px;
 }
-
+.advant-box .item::before {
+    display: inline-block;
+    content: "";
+    height: 120px;
+    width: 270px;
+    background-color: var(--secondary-background-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-antenna::before {
+    background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+    background-image: url(../images/clock.svg);
+}
+.icon-diagram::before {
+    background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before {
+    background-image: url(../images/astronaut.svg);
+}
 .container .title {
     margin-bottom: 50px;
 }
@@ -171,7 +218,8 @@ header .contacts {
     padding-bottom: 94px;
 }
 .section .title,
-.team .title {
+.team .title,
+.clients .title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -203,6 +251,11 @@ header .contacts {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     padding-bottom: 30px;
+    box-shadow:
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px
 }
 span,
 .current, 
@@ -229,6 +282,66 @@ span,
 .team {
     background-color: var(--secondary-background-color);
 }
+
+.team-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.soc-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-top: 16px;
+    margin-right: 10px;
+    padding: 12px;
+}
+.soc-link:last-child{
+    margin-right: 0;
+}
+.icon-social {
+    fill: #AFB1B8;
+    width: 20px;
+    height: 20px;
+}
+.icon-social:hover,
+.icon-social:focus {
+    fill: var(--primary-background-color);
+}
+.soc-link:hover,
+.soc-link:focus {
+    background-color: var(--logo-color);
+}
+.companies {
+    display: flex;
+}
+.company {
+    flex-direction: column;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    margin-right: 30px;
+    padding: 16px 32px;
+}
+.company:last-child {
+    margin-right: 0;
+}
+.icon {
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;
+}
+.company:hover {
+    border-color: var(--logo-color);
+    fill: #2196F3;
+}
+.icon:hover,
+.icon:focus,
+.nav-icon:hover,
+.nav-icon:focus {
+    fill: #2196F3;
+}
 .filters {
     display: flex;
     margin-bottom: 34px;
@@ -250,7 +363,7 @@ span,
 }
 
 .filters button {
-    border-color: transparent;
+    border: none;
     border-radius: 4px;
 }
 .work-img {
@@ -280,10 +393,19 @@ h2.topic {
     flex-wrap: wrap;
 }
 .work .item {
+    box-sizing: border-box;
+    max-width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #EEE;
+    border: 1px solid #EEE;
     padding-bottom: 20px;
+}
+.work .item:focus,
+.work .item:hover {
+    box-shadow: 
+    0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .work .item:nth-child(3n) {
     margin-right: 0;
@@ -291,13 +413,18 @@ h2.topic {
 .work .item:nth-child(n+7) {
     margin-bottom: 0;
 }
-button.filter:hover,
+.filter:hover,
 .filter:focus {
     padding-left: 25px;
     padding-right: 25px;
+    box-shadow: 
+        0px 3px 1px rgba(0, 0, 0, 0.1), 
+        0px 1px 2px rgba(0, 0, 0, 0.08), 
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .hero-button,
-.filter {
+.filter,
+.link {
     cursor: pointer;
 }
 footer .contacts {
@@ -310,6 +437,52 @@ address {
     margin-top: 20px;
 } 
 footer .container {
+    display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
+    align-items: baseline;
 }
+footer {
+    background-color: var(--footer-background-color);
+}
+.social-links .title{
+    color: var(--primary-background-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.link {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+.link:nth-child(1) {
+    background-image: url('../images/instagram.svg');
+}
+.link:nth-child(2) {
+    background-image: url('../images/twitter.svg');
+}
+.link:nth-child(3) {
+    background-image: url('../images/facebook.svg');
+}
+.link:nth-child(4) {
+    background-image: url('../images/linkedin.svg');
+    margin-right: 0;
+}
+.social-links {
+    margin-left: 70px;
+}
+
+
+
+
+
+
