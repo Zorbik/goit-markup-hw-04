@@ -84,14 +84,14 @@ header .logo{
     margin-right: 10px;
     width: 16px;
     height: 12px;
-    fill: var(--secondary-color);
+    fill: currentColor;
 }
 .contact-box-phone .nav-icon {
     padding: 0;
     margin-right: 10px;
     width: 10px;
     height: 16px;
-    fill: var(--secondary-color);
+    fill: currentColor;
 }
 
 .main-nav {
@@ -315,6 +315,7 @@ span,
 .companies {
     display: flex;
 }
+
 .company {
     flex-direction: column;
     width: 170px;
@@ -334,13 +335,11 @@ span,
 }
 .company:hover {
     border-color: var(--logo-color);
-    fill: #2196F3;
+    fill: var(--logo-color);
 }
 .icon:hover,
-.icon:focus,
-.nav-icon:hover,
-.nav-icon:focus {
-    fill: #2196F3;
+.icon:focus {
+    fill: var(--logo-color);
 }
 .filters {
     display: flex;
