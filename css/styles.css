@@ -6,6 +6,7 @@
     --logo-color: #2196F3;
     --footer-background-color: #2F303A;
     --footer-contact-color: rgba(255, 255, 255, .6);
+    --icon-color: #AFB1B8;
 }
 a {
     text-decoration: none;
@@ -295,35 +296,40 @@ span,
     margin-top: 16px;
     margin-right: 10px;
     padding: 12px;
+    color: var(--icon-color);
 }
 .soc-link:last-child{
     margin-right: 0;
 }
+.soc-link a {
+    color: inherit;
+}
 .icon-social {
-    fill: #AFB1B8;
+    fill: currentColor;
     width: 20px;
     height: 20px;
 }
-.icon-social:hover,
-.icon-social:focus {
-    fill: var(--primary-background-color);
-}
+
 .soc-link:hover,
 .soc-link:focus {
     background-color: var(--logo-color);
+    color: var(--primary-background-color);
 }
 .companies {
     display: flex;
 }
-
 .company {
     flex-direction: column;
     width: 170px;
     height: 92px;
-    border: 1px solid #AFB1B8;
+    border: 1px solid var(--icon-color);
     border-radius: 4px;
     margin-right: 30px;
     padding: 16px 32px;
+    color: var(--icon-color);
+}
+.company a {
+    color: inherit;
 }
 .company:last-child {
     margin-right: 0;
@@ -331,14 +337,16 @@ span,
 .icon {
     width: 106px;
     height: 60px;
-    fill: #AFB1B8;
+    fill: currentColor;
 }
 .company:hover {
     border-color: var(--logo-color);
-    fill: var(--logo-color);
+    color: var(--logo-color);
 }
 .icon:hover,
-.icon:focus {
+.icon:focus,
+.nav-icon:hover,
+.nav-icon:focus {
     fill: var(--logo-color);
 }
 .filters {
