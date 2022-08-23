@@ -80,16 +80,13 @@ header .logo{
     display: flex;
     margin-left: auto;
 }
-.contact-box-email .nav-icon {
+.nav-icon {
     padding: 0;
     margin-right: 10px;
     fill: currentColor;
+    vertical-align: middle;
 }
-.contact-box-phone .nav-icon {
-    padding: 0;
-    margin-right: 10px;
-    fill: currentColor;
-}
+
 
 .main-nav {
     display: flex;
