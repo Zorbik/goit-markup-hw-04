@@ -365,11 +365,10 @@ span,
     border: none;
     border-radius: 4px;
 }
-.work-img {
-    margin-bottom: 20px;
-}
+
 h2.topic {
     margin: 4px 24px;
+    margin-top: 20px;
 }
 
 .work .topic {
