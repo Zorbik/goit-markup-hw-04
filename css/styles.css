@@ -23,7 +23,7 @@ a {
     padding: 0;
 }
 ul {
-    list-style-type: none;
+    list-style: none;
 }
 .container {
     width: 1200px;
@@ -290,6 +290,7 @@ span,
     width: 44px;
     height: 44px;
     border-radius: 50%;
+
     color: var(--icon-color);
 }
 .team-socials li:not(:last-child) {
@@ -309,13 +310,13 @@ span,
 }
 .company {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 170px;
     height: 92px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
     
-    padding: 16px 32px;
     color: var(--icon-color);
 }
 
