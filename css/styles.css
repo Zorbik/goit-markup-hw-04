@@ -338,7 +338,7 @@ span,
 }
 .filters {
     display: flex;
-    margin-bottom: 34px;
+    margin-bottom: 50px;
     justify-content: center;
 }
 .filters .item + .item {
@@ -459,17 +459,13 @@ footer {
     background-position: center;
     margin-right: 10px;
 }
-.link:nth-child(1) {
-    background-image: url('../images/instagram.svg');
+.link a {
+    height: 20px;
 }
-.link:nth-child(2) {
-    background-image: url('../images/twitter.svg');
-}
-.link:nth-child(3) {
-    background-image: url('../images/facebook.svg');
+.link .icon-social {
+    fill: #fff;
 }
 .link:nth-child(4) {
-    background-image: url('../images/linkedin.svg');
     margin-right: 0;
 }
 .social-links {
