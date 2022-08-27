@@ -142,10 +142,6 @@ header .logo{
     padding-top: 94px;
     padding-bottom: 94px;
 }
-
-.activities {
-    padding-bottom: 94px;
-}
 .advantage-item-title {
     margin-bottom: 10px;
 
@@ -198,16 +194,14 @@ header .logo{
 header .contacts {
     color: var(--secondary-color);
 }
-
+.activities {
+    padding-bottom: 94px;
+}
 .do-box {
     display: flex;
 }
 .do-box .item + .item {
     margin-left: 30px;
-}
-.team {
-    padding-top: 94px;
-    padding-bottom: 94px;
 }
 .do-title,
 .team-title,
@@ -217,6 +211,10 @@ header .contacts {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+}
+.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 .team .card {
     font-weight: 500;
